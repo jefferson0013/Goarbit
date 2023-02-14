@@ -1,12 +1,13 @@
 .seccions-chat {
   width: 80%;
-  height: 86vh;
+  height: 90%;
   background-color: $Color-White;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
   overflow: auto;
+  // outline: 1px solid red;
 
   &::-webkit-scrollbar {
     width: 0;
@@ -22,8 +23,6 @@
     flex-direction: column;
     gap: 20px;
     padding-top: 10px;
-
-    background-color: aquamarine;
 
     .mesaje {
       overflow-wrap: break-word;
@@ -47,7 +46,6 @@
   align-items: center;
   justify-content: center;
   background-color: $Color-White;
-  opacity: 50%;
   // outline: 1px solid red;
 
   input {

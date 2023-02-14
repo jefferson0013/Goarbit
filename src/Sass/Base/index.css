@@ -19,9 +19,6 @@
   font-weight: 300;
   color: #0B042D;
 }
-* body {
-  overflow: hidden;
-}
 
 .container {
   width: 100%;
@@ -175,7 +172,7 @@
 
 .seccions-chat {
   width: 80%;
-  height: 86vh;
+  height: 90%;
   background-color: #FFFFFF;
   display: flex;
   align-items: center;
@@ -195,7 +192,6 @@
   flex-direction: column;
   gap: 20px;
   padding-top: 10px;
-  background-color: aquamarine;
 }
 .chat .text .mesaje {
   overflow-wrap: break-word;
@@ -216,7 +212,6 @@
   align-items: center;
   justify-content: center;
   background-color: #FFFFFF;
-  opacity: 50%;
 }
 .contain-form input {
   width: 290px;

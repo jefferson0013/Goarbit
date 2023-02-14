@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  // outline: 1px solid #ff0000;
+
+  h1 {
+    font-family: $Font;
+    font-weight: 500;
+    color: $Color-OxfordBlue;
+  }
+  h2 {
+    font-family: $Font;
+    font-weight: 400;
+    color: $Color-Oxford;
+  }
+  p {
+    font-family: $Font;
+    font-weight: 300;
+    color: $Color-Oxford;
+  }
+}

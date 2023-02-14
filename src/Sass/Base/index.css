@@ -147,6 +147,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: 100ms;
 }
 .submenu-clic h2:nth-child(5) {
   background-color: #0B042D;
@@ -227,14 +229,15 @@
 .chat .text .mesaje {
   background-color: #0B042D;
   margin-bottom: 15px;
+  margin-right: 40%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   border-radius: 0vh 2vh 2vh 2vh;
+  height: 100%;
 }
 .chat .text .mesaje h1 {
-  overflow-wrap: break-word;
-  width: 90%;
+  width: 100%;
   color: #FFFFFF;
   font-size: 15px;
   margin: 10px;

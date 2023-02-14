@@ -46,7 +46,6 @@ export function Chat() {
               <h1>{comment.text}</h1>
             </div>
           ))}
-          
           <div ref={commentsEndRef} />
         </div>
       </div>

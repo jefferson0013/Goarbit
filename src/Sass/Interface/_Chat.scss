@@ -30,14 +30,15 @@
     .mesaje {
       background-color: $Color-Oxford;
       margin-bottom: 15px;
+      margin-right: 40%;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       border-radius: 0vh 2vh 2vh 2vh;
+      height: 100%;
 
       h1 {
-        overflow-wrap: break-word;
-        width: 90%;
+        width: 100%;
         color: $Color-White;
         font-size: 15px;
         margin: 10px;

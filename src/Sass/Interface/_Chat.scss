@@ -1,14 +1,12 @@
 .seccions-chat {
-  height: 80vh;
   width: 80%;
-  height: 85vh;
+  height: 86vh;
   background-color: $Color-White;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
   overflow: auto;
-  // outline: 1px sol
 
   &::-webkit-scrollbar {
     width: 0;
@@ -24,14 +22,12 @@
     flex-direction: column;
     gap: 20px;
     padding-top: 10px;
-    // background-color: aquamarine;
+
+    background-color: aquamarine;
 
     .mesaje {
       overflow-wrap: break-word;
       width: 300px;
-      height: 100%;
-      padding: 10px 20px;
-      border-radius: 0px 20px 20px;
       background-color: $Color-Oxford;
 
       h1 {
@@ -44,13 +40,14 @@
 
 .contain-form {
   position: absolute;
-  top: 90%;
+  top: 93vh;
   width: 410px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: $Color-White;
+  opacity: 50%;
   // outline: 1px solid red;
 
   input {
@@ -59,7 +56,6 @@
     font-family: $Font;
     padding-left: 10px;
     overflow-wrap: break-word;
-
   }
 
   button {

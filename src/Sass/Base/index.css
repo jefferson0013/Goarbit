@@ -199,8 +199,9 @@
 }
 
 .seccions-chat {
+  margin-top: 10px;
   width: 80%;
-  height: 85vh;
+  height: 80vh;
   background-color: #FFFFFF;
   display: flex;
   align-items: flex-start;
@@ -208,10 +209,14 @@
   flex-direction: column;
   overflow: auto;
   background-color: #E0E0E5;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 10px;
 }
 .seccions-chat::-webkit-scrollbar {
-  width: 0;
+  width: 2px;
+  background-color: unset;
+}
+.seccions-chat::-webkit-scrollbar-thumb {
+  background-color: #9c9c9c;
 }
 
 .chat {
@@ -245,7 +250,7 @@
 
 .contain-form {
   position: absolute;
-  top: 93vh;
+  top: 89vh;
   width: 80%;
   height: 50px;
   display: flex;
@@ -258,7 +263,7 @@
   width: 95%;
   height: 40px;
   font-family: Montserrat;
-  padding-left: 10px;
+  margin-left: 10px;
   overflow-wrap: break-word;
   background-color: #E0E0E5;
   outline: none;

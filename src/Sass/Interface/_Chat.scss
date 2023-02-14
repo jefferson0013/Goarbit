@@ -1,6 +1,7 @@
 .seccions-chat {
+  margin-top: 10px;
   width: 80%;
-  height: 85vh;
+  height: 80vh;
   background-color: $Color-White;
   display: flex;
   align-items: flex-start;
@@ -8,11 +9,16 @@
   flex-direction: column;
   overflow: auto;
   background-color: $Color-Platinum;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 10px;
   // outline: 1px solid red;
 
   &::-webkit-scrollbar {
-    width: 0;
+    width: 2px;
+    background-color: unset;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #9c9c9c;
   }
 }
 
@@ -49,7 +55,7 @@
 
 .contain-form {
   position: absolute;
-  top: 93vh;
+  top: 89vh;
   width: 80%;
   height: 50px;
   display: flex;
@@ -63,7 +69,7 @@
     width: 95%;
     height: 40px;
     font-family: $Font;
-    padding-left: 10px;
+    margin-left: 10px;
     overflow-wrap: break-word;
     background-color: $Color-Platinum;
     outline: none;
@@ -91,7 +97,7 @@
       height: 25px;
     }
 
-    &:active{
+    &:active {
       transform: scale(1.5);
     }
   }

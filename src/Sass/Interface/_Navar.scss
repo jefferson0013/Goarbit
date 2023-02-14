@@ -126,7 +126,29 @@
   gap: 15%;
 
   h2 {
+    background-color: $Color-Platinum;
     font-size: 20px;
     opacity: 100%;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:nth-child(5){
+      background-color: $Color-Oxford;
+      color: $Color-White;
+    }
+
+    &:active {
+      width: 200px;
+      height: 40px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: scale(2);
+    }
   }
 }

@@ -1,12 +1,14 @@
 .seccions-chat {
   width: 80%;
-  height: 90%;
+  height: 85vh;
   background-color: $Color-White;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
   overflow: auto;
+  background-color: $Color-Platinum;
+  border-radius: 0px 0px 10px 10px;
   // outline: 1px solid red;
 
   &::-webkit-scrollbar {
@@ -15,56 +17,81 @@
 }
 
 .chat {
+  margin-left: 20px;
   .text {
+    margin-top: 10px;
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
     flex-direction: column;
-    gap: 20px;
-    padding-top: 10px;
 
     .mesaje {
-      overflow-wrap: break-word;
-      width: 300px;
       background-color: $Color-Oxford;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0vh 2vh 2vh 2vh;
 
       h1 {
+        overflow-wrap: break-word;
+        width: 90%;
         color: $Color-White;
         font-size: 15px;
+        margin: 10px;
       }
     }
   }
 }
 
 .contain-form {
-  position: sticky;
-  top: 82vh;
-  width: 410px;
+  position: absolute;
+  top: 93vh;
+  width: 80%;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   background-color: $Color-White;
   // outline: 1px solid red;
 
   input {
-    width: 290px;
-    height: 30px;
+    width: 95%;
+    height: 40px;
     font-family: $Font;
     padding-left: 10px;
     overflow-wrap: break-word;
+    background-color: $Color-Platinum;
+    outline: none;
+    border: none;
+    border-radius: 20px;
   }
 
   button {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
+    border: none;
+    background-color: unset;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: $Color-Platinum;
+    transition: 100ms;
 
     img {
-      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 25px;
+      height: 25px;
+    }
+
+    &:active{
+      transform: scale(1.5);
     }
   }
 }

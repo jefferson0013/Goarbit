@@ -46,6 +46,7 @@ export function Chat() {
               <h1>{comment.text}</h1>
             </div>
           ))}
+          
           <div ref={commentsEndRef} />
         </div>
       </div>
@@ -53,6 +54,7 @@ export function Chat() {
         <input
           type="text"
           placeholder="Escribe un mensaje"
+          required
           value={newComment}
           onChange={(e) => setNewComment(e.target.value)}
         />

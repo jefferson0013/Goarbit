@@ -2,7 +2,6 @@
 * {
   margin: 0;
   padding: 0;
-  outline: 1px solid #ff0000;
 }
 * h1 {
   font-family: Montserrat;
@@ -139,8 +138,28 @@
   gap: 15%;
 }
 .submenu-clic h2 {
+  background-color: #E0E0E5;
   font-size: 20px;
   opacity: 100%;
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submenu-clic h2:nth-child(5) {
+  background-color: #0B042D;
+  color: #FFFFFF;
+}
+.submenu-clic h2:active {
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(2);
 }
 
 .defect {
@@ -179,61 +198,89 @@
 
 .seccions-chat {
   width: 80%;
-  height: 90%;
+  height: 85vh;
   background-color: #FFFFFF;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
   overflow: auto;
+  background-color: #E0E0E5;
+  border-radius: 0px 0px 10px 10px;
 }
 .seccions-chat::-webkit-scrollbar {
   width: 0;
 }
 
+.chat {
+  margin-left: 20px;
+}
 .chat .text {
+  margin-top: 10px;
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
   flex-direction: column;
-  gap: 20px;
-  padding-top: 10px;
 }
 .chat .text .mesaje {
-  overflow-wrap: break-word;
-  width: 300px;
   background-color: #0B042D;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0vh 2vh 2vh 2vh;
 }
 .chat .text .mesaje h1 {
+  overflow-wrap: break-word;
+  width: 90%;
   color: #FFFFFF;
   font-size: 15px;
+  margin: 10px;
 }
 
 .contain-form {
-  position: sticky;
-  top: 82vh;
-  width: 410px;
+  position: absolute;
+  top: 93vh;
+  width: 80%;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   background-color: #FFFFFF;
 }
 .contain-form input {
-  width: 290px;
-  height: 30px;
+  width: 95%;
+  height: 40px;
   font-family: Montserrat;
   padding-left: 10px;
   overflow-wrap: break-word;
+  background-color: #E0E0E5;
+  outline: none;
+  border: none;
+  border-radius: 20px;
 }
 .contain-form button {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
+  border: none;
+  background-color: unset;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #E0E0E5;
+  transition: 100ms;
 }
 .contain-form button img {
-  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 25px;
+  height: 25px;
+}
+.contain-form button:active {
+  transform: scale(1.5);
 }/*# sourceMappingURL=index.css.map */

@@ -143,14 +143,14 @@
       color: $Color-White;
     }
 
-    &:active {
+    &:hover {
       width: 200px;
       height: 40px;
       border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      transform: scale(2);
+      transform: scale(1.5);
     }
   }
 }

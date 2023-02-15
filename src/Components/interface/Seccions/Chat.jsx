@@ -22,15 +22,19 @@ export function Chat() {
     const interval = setInterval(() => {
       setComments((comments) => {
         const now = Date.now();
-        return comments.filter((comment) => now - comment.timestamp < 60000);
+        return comments.filter((comment) => now - comment.timestamp < 5000);
       });
-    }, 160000);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (newComment.includes("hola")) {
+      alert("a");
+      return;
+    }
     const newTimestamp = Date.now();
     const newCommentObject = { text: newComment, timestamp: newTimestamp };
     setComments([...comments, newCommentObject]);

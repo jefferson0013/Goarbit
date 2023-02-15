@@ -149,12 +149,15 @@
   justify-content: center;
   cursor: pointer;
   transition: 100ms;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .submenu-clic h2:nth-child(5) {
   background-color: #0B042D;
   color: #FFFFFF;
 }
-.submenu-clic h2:hover {
+.submenu-clic h2:active {
   width: 200px;
   height: 40px;
   border-radius: 20px;
@@ -162,6 +165,9 @@
   align-items: center;
   justify-content: center;
   transform: scale(1.5);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .defect {

@@ -137,13 +137,14 @@
     justify-content: center;
     cursor: pointer;
     transition: 100ms;
+    user-select: none;
 
-    &:nth-child(5){
+    &:nth-child(5) {
       background-color: $Color-Oxford;
       color: $Color-White;
     }
 
-    &:hover {
+    &:active {
       width: 200px;
       height: 40px;
       border-radius: 20px;
@@ -151,6 +152,8 @@
       align-items: center;
       justify-content: center;
       transform: scale(1.5);
+      user-select: none;
+
     }
   }
 }

@@ -1,56 +1,26 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState } from "react";
 import sent from "../../../assets/sent.svg";
 
 export function Chat() {
-  const [comments, setComments] = useState([]);
-  const [newComment, setNewComment] = useState("");
-  const commentsEndRef = useRef(null);
+  const [value, setValue] = useState("");
 
-  useEffect(() => {
-    const localComments = localStorage.getItem("comments");
-    if (localComments) {
-      setComments(JSON.parse(localComments));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("comments", JSON.stringify(comments));
-    commentsEndRef.current.scrollIntoView({ behavior: "smooth" });
-  }, [comments]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setComments((comments) => {
-        const now = Date.now();
-        return comments.filter((comment) => now - comment.timestamp < 5000);
-      });
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
+  // localStorage.setItem();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (newComment.includes("hola")) {
-      alert("a");
-      return;
-    }
-    const newTimestamp = Date.now();
-    const newCommentObject = { text: newComment, timestamp: newTimestamp };
-    setComments([...comments, newCommentObject]);
-    setNewComment("");
+  };
+  const text = (e) => {
+    setValue(e.target.value);
+    console.log(e.target.value);
   };
 
   return (
     <div className="seccions-chat">
       <div className="chat">
         <div className="text">
-          {comments.map((comment, index) => (
-            <div className="mesaje" key={index}>
-              <h1>{comment.text}</h1>
-            </div>
-          ))}
-          <div ref={commentsEndRef} />
+          <div className="mesaje">
+            <h1>El chat aun esta en produccion</h1>
+          </div>
         </div>
       </div>
       <form onSubmit={handleSubmit} className="contain-form">
@@ -58,9 +28,10 @@ export function Chat() {
           type="text"
           placeholder="Escribe un mensaje"
           required
-          value={newComment}
-          onChange={(e) => setNewComment(e.target.value)}
+          value={value}
+          onChange={text}
         />
+        <div></div>
 
         <button type="submit">
           <img src={sent} />

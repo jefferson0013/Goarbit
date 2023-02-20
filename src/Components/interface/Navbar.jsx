@@ -21,6 +21,11 @@ export function Navbar() {
     setTitle(T);
     setHasClass(!hasClass);
   }
+
+  function handleTutorialsClick() {
+    setTitle("TUTORIALS");
+  }
+
   function Go(T) {
     setTitle(T);
     setHasClass();
@@ -51,7 +56,9 @@ export function Navbar() {
       {!hasClass && (
         <div className="contat-seccions">
           {title === "GOARBIT" && <Defect />}
-          {title === "INICIO" && <Home />}
+          {title === "INICIO" && (
+            <Home onTutorialsClick={handleTutorialsClick} />
+          )}
           {title === "TUTORIALS" && <Lerning />}
           {title === "CONTACTO" && <Contact />}
           {title === "CREAR CUENTA" && <Accout />}

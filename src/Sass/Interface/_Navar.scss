@@ -57,39 +57,41 @@
         justify-content: space-around;
         flex-direction: column;
         transform-origin: right;
+        transition: 1s;
 
         .line {
           width: 100%;
           height: 3px;
-          background-color: black;
+          background-color: rgb(222, 91, 91);
           border-radius: 1.5px;
-          transition: 300ms;
+          transition: 500ms;
 
           &:nth-child(1) {
-            width: 80%;
+            width: 100%;
           }
           &:nth-child(2) {
             width: 100%;
+            transition: 100ms;
           }
           &:nth-child(3) {
-            width: 60%;
+            width: 100%;
           }
         }
 
         .line-clic {
           transform-origin: right;
+          background-color: black;
 
           &:nth-child(1) {
-            transform: rotate(-45deg);
             width: 100%;
+            transform: rotate(-45deg);
           }
           &:nth-child(2) {
-            width: 10%;
-            opacity: 0;
+            width: 0%;
           }
           &:nth-child(3) {
-            transform: rotate(45deg);
             width: 100%;
+            transform:  rotate(45deg);
           }
         }
       }
@@ -136,7 +138,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: 100ms;
+    transition: 200ms;
     user-select: none;
 
     &:nth-child(5) {
@@ -144,7 +146,7 @@
       color: $Color-White;
     }
 
-    &:active {
+    &:hover {
       width: 200px;
       height: 40px;
       border-radius: 20px;
@@ -153,7 +155,6 @@
       justify-content: center;
       transform: scale(1.5);
       user-select: none;
-
     }
   }
 }

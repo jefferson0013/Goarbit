@@ -76,37 +76,39 @@
   justify-content: space-around;
   flex-direction: column;
   transform-origin: right;
+  transition: 1s;
 }
 .container-nav .nav .navigation .menu .line {
   width: 100%;
   height: 3px;
-  background-color: black;
+  background-color: rgb(222, 91, 91);
   border-radius: 1.5px;
-  transition: 300ms;
+  transition: 500ms;
 }
 .container-nav .nav .navigation .menu .line:nth-child(1) {
-  width: 80%;
+  width: 100%;
 }
 .container-nav .nav .navigation .menu .line:nth-child(2) {
   width: 100%;
+  transition: 100ms;
 }
 .container-nav .nav .navigation .menu .line:nth-child(3) {
-  width: 60%;
+  width: 100%;
 }
 .container-nav .nav .navigation .menu .line-clic {
   transform-origin: right;
+  background-color: black;
 }
 .container-nav .nav .navigation .menu .line-clic:nth-child(1) {
-  transform: rotate(-45deg);
   width: 100%;
+  transform: rotate(-45deg);
 }
 .container-nav .nav .navigation .menu .line-clic:nth-child(2) {
-  width: 10%;
-  opacity: 0;
+  width: 0%;
 }
 .container-nav .nav .navigation .menu .line-clic:nth-child(3) {
-  transform: rotate(45deg);
   width: 100%;
+  transform: rotate(45deg);
 }
 
 .submenu {
@@ -148,7 +150,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: 100ms;
+  transition: 200ms;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -157,7 +159,7 @@
   background-color: #0B042D;
   color: #FFFFFF;
 }
-.submenu-clic h2:active {
+.submenu-clic h2:hover {
   width: 200px;
   height: 40px;
   border-radius: 20px;
@@ -238,7 +240,7 @@
   flex-direction: column;
 }
 .chat .text .mesaje {
-  background-color: #0B042D;
+  background-color: red;
   margin-bottom: 15px;
   margin-right: 40%;
   display: flex;

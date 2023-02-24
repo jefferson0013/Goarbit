@@ -45,7 +45,7 @@ export function Navbar() {
           <h2 onClick={() => ClicTitle("GONEWS")}>GONEWS</h2>
           <h2 onClick={() => ClicTitle("TUTORIALS")}>TUTORIALS</h2>
           <h2 onClick={() => ClicTitle("CHAT")}>CHAT</h2>
-          <h2 onClick={() => ClicTitle("CREAR CUENTA")}>CREAR CUENTA</h2>
+          <h2 onClick={() => ClicTitle("CREAR CUENTA")}>CUENTA</h2>
         </div>
         {!hasClass && (
           <div className="contat-seccions">

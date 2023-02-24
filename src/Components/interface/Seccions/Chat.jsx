@@ -33,7 +33,7 @@ export function Chat() {
         />
         <div></div>
 
-        <button type="submit">
+        <button onChange={text} type="submit">
           <img src={sent} />
         </button>
       </form>

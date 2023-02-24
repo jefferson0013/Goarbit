@@ -169,7 +169,7 @@
     transform: rotate(45deg);
   }
   .submenu {
-    transition: 500ms;
+    transition: 600ms;
     position: absolute;
     width: 100%;
     height: 0vh;
@@ -182,7 +182,7 @@
   .submenu h2 {
     font-size: 0px;
     opacity: 0;
-    transition: 200ms;
+    transition: 300ms;
   }
   .submenu-clic {
     width: 100%;
@@ -215,14 +215,14 @@
     background-color: #0B042D;
     color: #FFFFFF;
   }
-  .submenu-clic h2:hover {
+  .submenu-clic h2:active {
     width: 200px;
     height: 40px;
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: scale(1.5);
+    transform: scale(5);
     -webkit-user-select: none;
        -moz-user-select: none;
             user-select: none;

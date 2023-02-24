@@ -165,7 +165,7 @@
   }
 
   .submenu {
-    transition: 500ms;
+    transition: 600ms;
     position: absolute;
     width: 100%;
     height: 0vh;
@@ -178,7 +178,7 @@
     h2 {
       font-size: 0px;
       opacity: 0;
-      transition: 200ms;
+      transition: 300ms;
     }
   }
   .submenu-clic {
@@ -211,14 +211,14 @@
         color: $Color-White;
       }
 
-      &:hover {
+      &:active {
         width: 200px;
         height: 40px;
         border-radius: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
-        transform: scale(1.5);
+        transform: scale(5);
         user-select: none;
       }
     }

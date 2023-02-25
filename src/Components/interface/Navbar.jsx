@@ -4,25 +4,37 @@ import { Lerning } from "./Seccions/Lerning";
 import { Chat } from "./Seccions/Chat";
 import { GoNews } from "./Seccions/GoNews";
 import { Login } from "./Seccions/Login";
+import { Loading } from "./Seccions/Loading";
 
 import logo from "../../assets/logo.svg";
 
 export function Navbar() {
   const [hasClass, setHasClass] = useState(false);
   const [title, setTitle] = useState("GONEWS");
+  const [isLoading, setIsLoading] = useState(false);
 
   function toggleClass() {
     setHasClass(!hasClass);
   }
 
   function ClicTitle(T) {
+    setIsLoading(true);
     setTitle(T);
     setHasClass(!hasClass);
+    setHasClass(false);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
   }
 
   function Go(T) {
+    setIsLoading(true);
     setTitle(T);
     setHasClass();
+    setHasClass(false);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
   }
 
   return (
@@ -52,10 +64,17 @@ export function Navbar() {
         </div>
         {!hasClass && (
           <div className="contat-seccions">
-            {title === "GONEWS" && <GoNews />}
-            {title === "TUTORIALS" && <Lerning />}
-            {title === "CREAR CUENTA" && <Login />}
-            {title === "CHAT" && <Chat />}
+            {isLoading ? (
+              <Loading />
+            ) : title === "GONEWS" ? (
+              <GoNews />
+            ) : title === "TUTORIALS" ? (
+              <Lerning />
+            ) : title === "CREAR CUENTA" ? (
+              <Login />
+            ) : title === "CHAT" ? (
+              <Chat />
+            ) : null}
           </div>
         )}
       </div>
@@ -80,10 +99,17 @@ export function Navbar() {
 
         {!hasClass && (
           <div className="contat-seccions">
-            {title === "GONEWS" && <GoNews />}
-            {title === "TUTORIALS" && <Lerning />}
-            {title === "CREAR CUENTA" && <Login />}
-            {title === "CHAT" && <Chat />}
+            {isLoading ? (
+              <Loading />
+            ) : title === "GONEWS" ? (
+              <GoNews />
+            ) : title === "TUTORIALS" ? (
+              <Lerning />
+            ) : title === "CREAR CUENTA" ? (
+              <Login />
+            ) : title === "CHAT" ? (
+              <Chat />
+            ) : null}
           </div>
         )}
       </div>

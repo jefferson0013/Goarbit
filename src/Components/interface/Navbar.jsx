@@ -36,7 +36,10 @@ export function Navbar() {
             </div>
             <div onClick={toggleClass} className="menu">
               <div className={`line ${hasClass ? "line-clic" : ""}`}></div>
-              <div className={`line ${hasClass ? "line-clic" : ""}`}></div>
+              <div className={`line ${hasClass ? "line-clic" : ""}`}>
+                <div></div>
+                <div></div>
+              </div>
               <div className={`line ${hasClass ? "line-clic" : ""}`}></div>
             </div>
           </div>
@@ -65,7 +68,7 @@ export function Navbar() {
               <h1>{title}</h1>
             </div>
             <div className="menu">
-              <div className="d" >
+              <div className="d">
                 <h2 onClick={() => Go("GONEWS")}>GONEWS</h2>
                 <h2 onClick={() => Go("TUTORIALS")}>TUTORIALS</h2>
                 <h2 onClick={() => Go("CHAT")}>CHAT</h2>

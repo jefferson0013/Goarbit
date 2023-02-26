@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Loading } from "../Movil/Seccions/Loading";
 import { Lerning } from "../Movil/Seccions/Lerning";
 import { Chat } from "../Movil/Seccions/Chat";
-import { GoNews } from "../Movil/Seccions/News/GoNews";
+import { GoNews } from "../Secciones/GoNews";
 import { Login } from "../Movil/Seccions/Login";
 import logo from "/logo.svg";
 

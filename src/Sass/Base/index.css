@@ -347,7 +347,7 @@
 }
 .contat-seccions .seccions {
   width: 100%;
-  height: 95%;
+  height: 93%;
   background-color: #efefef;
   display: flex;
   align-items: center;
@@ -445,4 +445,66 @@
 }
 .contain-form button:active {
   transform: scale(1.5);
+}
+
+.container-notice {
+  width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.container-notice .notice {
+  width: 360px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: unset;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.074);
+  gap: 5px;
+}
+.container-notice .notice .title {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.container-notice .notice .title img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+.container-notice .notice .title div {
+  width: 100%;
+}
+.container-notice .notice .title div h1 {
+  width: 100%;
+  font-size: 25px;
+}
+.container-notice .notice .title div h2 {
+  font-size: 15px;
+}
+.container-notice .notice .container-img img {
+  width: 350px;
+  height: 350px;
+  border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #FFFFFF;
+}
+.container-notice .notice details {
+  width: 350px;
+}
+.container-notice .notice details summary {
+  cursor: pointer;
+  display: flex;
+}
+.container-notice .notice details summary h2 {
+  font-size: 15px;
 }/*# sourceMappingURL=index.css.map */

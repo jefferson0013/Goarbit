@@ -1,19 +1,26 @@
 import React, { useState, useEffect } from "react";
 import newsData from "./news.json";
-import { Loading } from "../Loading";
 
 function NewsList({ newsData }) {
   return (
-    <div>
+    <div className="container-notice">
       {newsData.map((newsItem) => (
-        <div key={newsItem.id}>
-          <h1>{newsItem.name}</h1>
-          <div>
+        <div className="notice" key={newsItem.id}>
+          <div className="title" >
+            <img src={newsItem.logo}/>
+            <div>
+              <h1>{newsItem.name}</h1>
+              <h2>{newsItem.category}</h2>
+            </div>
+          </div>
+          <div className="container-img">
             <img width="200px" src={newsItem.image} />
           </div>
           <details>
-            <summary>Ver mas:</summary>
-            <p>{newsItem.content}</p>
+            <p>{newsItem.content} </p>
+            <summary>
+              <h2>Descripcion</h2>
+            </summary>
           </details>
         </div>
       ))}
@@ -34,9 +41,7 @@ export function GoNews() {
 
   return (
     <div className="seccions ">
-      <div>
-        <h1>Noticias</h1>
-      </div>
+      <div></div>
       {loading ? <p>cargando las noticias</p> : <NewsList newsData={news} />}
     </div>
   );

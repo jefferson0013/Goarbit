@@ -3,33 +3,39 @@
     "id": 0,
     "name": "Viernes de Cobro",
     "image": "https://jefferson0013.github.io/Goarbit/logo.svg",
-    "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur consectetur aliquam illo quisquam, placeat maxime harum cumque nostrum facere aspernatur expedita quam fugit. Et aliquam fuga nobis cumque commodi?",
+    "logo" : "logo.png",
+    "content": "LLorem, ipsum dolor sit amet consecteturLorem, ipsum dolor sit amet consecteturLorem, ipsum dolor sit amet consecteturLorem, ipsum dolor sit amet consecteturLorem, ipsum dolor sit amet consecteturLorem, ipsum dolor sit amet consecteturLorem, ipsum dolor sit amet consecteturLorem, ipsum dolor sit amet consecteturorem, ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur consectetur aliquam illo quisquam, placeat maxime harum cumque nostrum facere aspernatur expedita quam fugit. Et aliquam fuga nobis cumque commodi?",
     "date": {
       "day": 13,
       "month": "januari",
       "year": 2023
-    }
+    },
+    "category" : "comunidado"
   },
   {
     "id": 1,
     "name": "V de Cobro",
-    "image": "/images.jpeg",
+    "image": "images.jpeg",
+    "logo" : "logo.png",
     "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur consectetur aliquam illo quisquam, placeat maxime harum cumque nostrum facere aspernatur expedita quam fugit. Et aliquam fuga nobis cumque commodi?",
     "date": {
       "day": 17,
       "month": "januari",
       "year": 2093
-    }
+    },
+    "category" : "feedback"
   },
   {
     "id": 2,
     "name": "Vieobro",
-    "image": "/images.jpeg",
+    "image": "images.jpeg",
+    "logo" : "logo.png",
     "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur consectetur aliquam illo quisquam, placeat maxime harum cumque nostrum facere aspernatur expedita quam fugit. Et aliquam fuga nobis cumque commodi?",
     "date": {
       "day": 15,
       "month": "januari",
       "year": 2083
-    }
+    },
+    "category" : "administrative"
   }
 ]

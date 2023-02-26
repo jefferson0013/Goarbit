@@ -11,7 +11,10 @@ function NewsList({ newsData }) {
           <div>
             <img width="200px" src={newsItem.image} />
           </div>
-          <p>{newsItem.content}</p>
+          <details>
+            <summary>Ver mas:</summary>
+            <p>{newsItem.content}</p>
+          </details>
         </div>
       ))}
     </div>

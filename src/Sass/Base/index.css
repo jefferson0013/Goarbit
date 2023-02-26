@@ -25,6 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #efefef;
 }
 
 .lds-ellipsis {
@@ -156,7 +157,7 @@
     font-size: 18px;
   }
   .container-nav1 .nav .navigation .menu .d h2:hover {
-    background-color: #E0E0E5;
+    background-color: #efefef;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -306,7 +307,7 @@
     gap: 15%;
   }
   .submenu-clic h2 {
-    background-color: #E0E0E5;
+    background-color: #efefef;
     font-size: 20px;
     opacity: 100%;
     width: 200px;
@@ -347,7 +348,7 @@
 .contat-seccions .seccions {
   width: 100%;
   height: 95%;
-  background-color: #E0E0E5;
+  background-color: #efefef;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -368,7 +369,7 @@
   justify-content: center;
   flex-direction: column;
   overflow: auto;
-  background-color: #E0E0E5;
+  background-color: #efefef;
   border-radius: 10px;
 }
 .seccions-chat::-webkit-scrollbar {
@@ -418,7 +419,7 @@
   font-family: Montserrat;
   padding-left: 10px;
   overflow-wrap: break-word;
-  background-color: #E0E0E5;
+  background-color: #efefef;
   outline: none;
   border: none;
   border-radius: 20px;
@@ -432,7 +433,7 @@
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  background-color: #E0E0E5;
+  background-color: #efefef;
   transition: 100ms;
 }
 .contain-form button img {

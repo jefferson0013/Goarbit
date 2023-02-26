@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-import { Loading } from "../Seccions/Loading";
-import { Lerning } from "../Seccions/Lerning";
-import { Chat } from "../Seccions/Chat";
-import { GoNews } from "../Seccions/GoNews";
-import { Login } from "../Seccions/Login";
-import logo from "../../../assets/logo.svg";
+import { Loading } from "./Seccions/Loading";
+import { Lerning } from "./Seccions/Lerning";
+import { Chat } from "./Seccions/Chat";
+import { GoNews } from "./Seccions/News/GoNews";
+import { Login } from "./Seccions/Login";
+import logo from "../../../../../public/assets/logo.svg";
 
 export function NavDesktop() {
   const [hasClass, setHasClass] = useState(false);

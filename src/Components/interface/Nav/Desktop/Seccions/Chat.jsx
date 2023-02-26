@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import sent from "../../../assets/sent.svg";
+import sent from "../../../../../../public/assets/sent.svg";
 
 export function Chat() {
   const [value, setValue] = useState("");

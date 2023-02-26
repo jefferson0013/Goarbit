@@ -2,7 +2,7 @@ import React from "react";
 
 export function GoNews() {
   return (
-    <div>
+    <div className="seccions ">
       <h1>GoNews</h1>
     </div>
   );

@@ -5,7 +5,7 @@ import { Lerning } from "./Seccions/Lerning";
 import { Chat } from "./Seccions/Chat";
 import { GoNews } from "./Seccions/News/GoNews";
 import { Login } from "./Seccions/Login";
-import logo from "../../../../../public/assets/logo.svg";
+import logo from "/logo.svg";
 
 export function NavDesktop() {
   const [hasClass, setHasClass] = useState(false);

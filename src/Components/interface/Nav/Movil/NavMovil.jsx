@@ -5,7 +5,7 @@ import { Lerning } from "../Movil/Seccions/Lerning";
 import { Chat } from "../Movil/Seccions/Chat";
 import { GoNews } from "../Movil/Seccions/News/GoNews";
 import { Login } from "../Movil/Seccions/Login";
-import logo from "../../../../../public/assets/logo.svg";
+import logo from "/logo.svg";
 
 export function NavMovil() {
   const [hasClass, setHasClass] = useState(false);

@@ -13,7 +13,7 @@
   {
     "id": 1,
     "name": "V de Cobro",
-    "image": "/public/images.jpeg",
+    "image": "/images.jpeg",
     "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur consectetur aliquam illo quisquam, placeat maxime harum cumque nostrum facere aspernatur expedita quam fugit. Et aliquam fuga nobis cumque commodi?",
     "date": {
       "day": 17,
@@ -24,7 +24,7 @@
   {
     "id": 2,
     "name": "Vieobro",
-    "image": "/public/images.jpeg",
+    "image": "/images.jpeg",
     "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet pariatur consectetur aliquam illo quisquam, placeat maxime harum cumque nostrum facere aspernatur expedita quam fugit. Et aliquam fuga nobis cumque commodi?",
     "date": {
       "day": 15,

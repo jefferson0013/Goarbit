@@ -42,7 +42,7 @@ function NewsList({ newsData }) {
           </div>
         </div>
       ))}
-      <div></div>
+      <div className="final">a</div>
     </div>
   );
 }

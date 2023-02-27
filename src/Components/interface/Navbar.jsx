@@ -5,7 +5,7 @@ export function Navbar() {
   return (
     <>
       <NavMovil />
-      <NavDesktop />
+      {/* <NavDesktop /> */}
     </>
   );
 }

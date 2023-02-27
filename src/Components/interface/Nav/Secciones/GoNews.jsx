@@ -24,7 +24,7 @@ function NewsList({ newsData }) {
                 <h2>Descripcion</h2>
                 <div className="img-download">
                   <a href={newsItem.image} download="goNews.jpg">
-                    <img src="/download.svg" alt="" />
+                    <img src="download.svg" alt="" />
                   </a>
                 </div>
               </summary>

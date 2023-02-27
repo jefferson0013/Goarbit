@@ -2,9 +2,17 @@ import React, { useState, useEffect } from "react";
 import newsData from "./news.json";
 
 function NewsList({ newsData }) {
+  const download = () => {
+    const currentDate = new Date();
+    const uniqueNumber = currentDate.getTime();
+    return `goNews_${uniqueNumber}.jpg`;
+  };
 
   return (
     <div className="container-notice">
+      <div className="title-news">
+        <h1>Bienvenido</h1>
+      </div>
       {newsData.map((newsItem) => (
         <div className="notice" key={newsItem.id}>
           <div className="title">
@@ -19,11 +27,13 @@ function NewsList({ newsData }) {
           </div>
           <div className="description">
             <details>
-              <p>{newsItem.content} </p>
+              <p>
+                {newsItem.content} <br /> <b>Fecha: {newsItem.date} </b>{" "}
+              </p>
               <summary>
                 <h2>Descripcion</h2>
                 <div className="img-download">
-                  <a href={newsItem.image} download="goNews.jpg">
+                  <a href={newsItem.image} download={download()}>
                     <img src="download.svg" alt="" />
                   </a>
                 </div>
@@ -32,6 +42,7 @@ function NewsList({ newsData }) {
           </div>
         </div>
       ))}
+      <div></div>
     </div>
   );
 }
@@ -49,7 +60,6 @@ export function GoNews() {
 
   return (
     <div className="seccions ">
-      <div></div>
       {loading ? <p>cargando las noticias</p> : <NewsList newsData={news} />}
     </div>
   );

@@ -484,11 +484,13 @@
   width: 100%;
 }
 .container-notice .notice .title div h1 {
-  width: 100%;
-  font-size: 25px;
+  overflow: hidden;
+  width: 300px;
+  height: 30px;
+  font-size: 20px;
 }
 .container-notice .notice .title div h2 {
-  font-size: 15px;
+  font-size: 12px;
 }
 .container-notice .notice .container-img img {
   width: 350px;
@@ -518,4 +520,19 @@
 .container-notice .notice details p {
   padding-top: 15px;
   font-size: 15px;
+}
+.container-notice .notice details p b {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.title-news {
+  margin-top: 10px;
+  width: 380px;
+}
+.title-news h1 {
+  font-size: 30px;
 }/*# sourceMappingURL=index.css.map */

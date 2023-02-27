@@ -56,14 +56,29 @@
     details {
       width: 350px;
 
+
       summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         cursor: pointer;
         display: flex;
+
         h2 {
           font-size: 15px;
         }
+        .img-download{
+          a{
+            img{
+              fill: red;
+              width: 30px;
+            }
+          }
+        }
       }
       p {
+        padding-top: 15px;
+        font-size: 15px;
       }
     }
   }

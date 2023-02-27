@@ -502,9 +502,20 @@
   width: 350px;
 }
 .container-notice .notice details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   cursor: pointer;
   display: flex;
 }
 .container-notice .notice details summary h2 {
+  font-size: 15px;
+}
+.container-notice .notice details summary .img-download a img {
+  fill: red;
+  width: 30px;
+}
+.container-notice .notice details p {
+  padding-top: 15px;
   font-size: 15px;
 }/*# sourceMappingURL=index.css.map */

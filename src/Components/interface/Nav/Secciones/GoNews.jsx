@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import newsData from "./news.json";
 
 function NewsList({ newsData }) {
+
   return (
     <div className="container-notice">
       {newsData.map((newsItem) => (
         <div className="notice" key={newsItem.id}>
-          <div className="title" >
-            <img src={newsItem.logo}/>
+          <div className="title">
+            <img src={newsItem.logo} />
             <div>
               <h1>{newsItem.name}</h1>
               <h2>{newsItem.category}</h2>
@@ -16,12 +17,19 @@ function NewsList({ newsData }) {
           <div className="container-img">
             <img width="200px" src={newsItem.image} />
           </div>
-          <details>
-            <p>{newsItem.content} </p>
-            <summary>
-              <h2>Descripcion</h2>
-            </summary>
-          </details>
+          <div className="description">
+            <details>
+              <p>{newsItem.content} </p>
+              <summary>
+                <h2>Descripcion</h2>
+                <div className="img-download">
+                  <a href={newsItem.image} download="goNews.jpg">
+                    <img src="/download.svg" alt="" />
+                  </a>
+                </div>
+              </summary>
+            </details>
+          </div>
         </div>
       ))}
     </div>

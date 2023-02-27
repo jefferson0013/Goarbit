@@ -80,7 +80,7 @@ export function NavMovil() {
           </div>
         </div>
       </div>
-      {!hasClass && (
+      {true && (
         <div className="contat-seccions">
           {isLoading ? (
             <Loading />

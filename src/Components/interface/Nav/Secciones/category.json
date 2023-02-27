@@ -1,0 +1,42 @@
+[
+  {
+    "category": "all",
+    "name": "all",
+    "logo" : "logo.svg"
+  },
+  {
+    "category": "goarbit",
+    "name": "goarbit",
+    "logo" : "logo.svg"
+  },
+  {
+    "category": "crypto",
+    "name": "crypto",
+    "logo" : "logo.svg"
+  },
+  {
+    "category": "noticias",
+    "name": "noticias",
+    "logo" : "logo.svg"
+  },
+  {
+    "category": "personas",
+    "name": "personas",
+    "logo" : "logo.svg"
+  },
+  {
+    "category": "inversiones",
+    "name": "inversiones",
+    "logo" : "logo.svg"
+  },
+  {
+    "category": "empresas",
+    "name": "empresas",
+    "logo" : "logo.svg"
+  },
+  {
+    "category": "recomendacion",
+    "name": "recomendacion",
+    "logo" : "logo.svg"
+  }
+]

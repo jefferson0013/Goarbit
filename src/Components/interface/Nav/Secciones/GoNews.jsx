@@ -3,7 +3,7 @@ import newsData from "./news.json";
 import newCategory from "./category.json";
 
 function NewsList({ newsData }) {
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState(null);
 
   const download = () => {
     const currentDate = new Date();
@@ -15,7 +15,11 @@ function NewsList({ newsData }) {
     <div className="container-notice">
       <div className="container-category">
         {newCategory.map((c) => (
-          <div className="category" onClick={() => setCategory(c.category)}>
+          <div
+            className="category"
+            key={c.category}
+            onClick={() => console.log(setCategory(c.category))}
+          >
             <div>
               <img src={c.logo} />
             </div>
@@ -25,38 +29,37 @@ function NewsList({ newsData }) {
       </div>
       {newsData.map((newsItem) => (
         <div key={newsItem.id}>
-          {newsItem.category === category ||
-            (!category && (
-              <>
-                <div className="notice">
-                  <div className="title">
-                    <img src={newsItem.logo} />
-                    <div>
-                      <h1>{newsItem.name}</h1>
-                      <h2>{newsItem.category}</h2>
-                    </div>
-                  </div>
-                  <div className="container-img">
-                    <img width="200px" src={newsItem.image} />
-                  </div>
-                  <div className="description">
-                    <details>
-                      <p>
-                        {newsItem.content} <br /> <b>Fecha: {newsItem.date} </b>
-                      </p>
-                      <summary>
-                        <h2>Descripcion</h2>
-                        <div className="img-download">
-                          <a href={newsItem.image} download={download()}>
-                            <img src="download.svg" alt="" />
-                          </a>
-                        </div>
-                      </summary>
-                    </details>
+          {(newsItem.category === category || category === null) && (
+            <>
+              <div className="notice">
+                <div className="title">
+                  <img src={newsItem.logo} />
+                  <div>
+                    <h1>{newsItem.name}</h1>
+                    <h2>{newsItem.category}</h2>
                   </div>
                 </div>
-              </>
-            ))}
+                <div className="container-img">
+                  <img width="200px" src={newsItem.image} />
+                </div>
+                <div className="description">
+                  <details>
+                    <p>
+                      {newsItem.content} <br /> <b>Fecha: {newsItem.date} </b>
+                    </p>
+                    <summary>
+                      <h2>Descripcion</h2>
+                      <div className="img-download">
+                        <a href={newsItem.image} download={download()}>
+                          <img src="download.svg" alt="" />
+                        </a>
+                      </div>
+                    </summary>
+                  </details>
+                </div>
+              </div>
+            </>
+          )}
         </div>
       ))}
 

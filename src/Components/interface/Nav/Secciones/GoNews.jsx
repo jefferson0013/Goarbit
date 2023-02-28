@@ -4,11 +4,20 @@ import newCategory from "./category.json";
 
 function NewsList({ newsData }) {
   const [category, setCategory] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const download = () => {
     const currentDate = new Date();
     const uniqueNumber = currentDate.getTime();
     return `goNews_${uniqueNumber}.jpg`;
+  };
+
+  const handleCategoryChange = (newCategory) => {
+    setIsLoading(true);
+    setCategory(newCategory);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, navigator.connection.downlink);
   };
 
   return (
@@ -18,7 +27,7 @@ function NewsList({ newsData }) {
           <div
             className="category"
             key={c.category}
-            onClick={() => console.log(setCategory(c.category))}
+            onClick={() => handleCategoryChange(c.category)}
           >
             <div>
               <img src={c.logo} />
@@ -27,42 +36,48 @@ function NewsList({ newsData }) {
           </div>
         ))}
       </div>
-      {newsData.map((newsItem) => (
-        <div key={newsItem.id}>
-          {(newsItem.category === category || category === null) && (
-            <>
-              <div className="notice">
-                <div className="title">
-                  <img src={newsItem.logo} />
-                  <div>
-                    <h1>{newsItem.name}</h1>
-                    <h2>{newsItem.category}</h2>
-                  </div>
-                </div>
-                <div className="container-img">
-                  <img width="200px" src={newsItem.image} />
-                </div>
-                <div className="description">
-                  <details>
-                    <p>
-                      {newsItem.content} <br /> <b>Fecha: {newsItem.date} </b>
-                    </p>
-                    <summary>
-                      <h2>Descripcion</h2>
-                      <div className="img-download">
-                        <a href={newsItem.image} download={download()}>
-                          <img src="download.svg" alt="" />
-                        </a>
+      {isLoading ? (
+        <div className="loading">Cargando...</div>
+      ) : (
+        <>
+          {newsData.map((newsItem) => (
+            <div key={newsItem.id}>
+              {(newsItem.category === category || category === null) && (
+                <>
+                  <div className="notice">
+                    <div className="title">
+                      <img src={newsItem.logo} />
+                      <div>
+                        <h1>{newsItem.name}</h1>
+                        <h2>{newsItem.category}</h2>
                       </div>
-                    </summary>
-                  </details>
-                </div>
-              </div>
-            </>
-          )}
-        </div>
-      ))}
-
+                    </div>
+                    <div className="container-img">
+                      <img width="200px" src={newsItem.image} />
+                    </div>
+                    <div className="description">
+                      <details>
+                        <p>
+                          {newsItem.content} <br />{" "}
+                          <b>Fecha: {newsItem.date} </b>
+                        </p>
+                        <summary>
+                          <h2>Descripcion</h2>
+                          <div className="img-download">
+                            <a href={newsItem.image} download={download()}>
+                              <img src="download.svg" alt="" />
+                            </a>
+                          </div>
+                        </summary>
+                      </details>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
+          ))}
+        </>
+      )}
       <div className="final">a</div>
     </div>
   );
@@ -76,7 +91,7 @@ export function GoNews() {
     setTimeout(() => {
       setNews(newsData);
       setLoading(false);
-    }, 500);
+    }, navigator.connection.downlink);
   }, []);
 
   return (

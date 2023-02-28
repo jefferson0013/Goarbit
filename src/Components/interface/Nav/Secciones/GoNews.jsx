@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import newsData from "./news.json";
 import newCategory from "./category.json";
 import { Notice } from "./Loadings/Notice";
+import { Loading } from "../../Nav/Movil/Seccions/Loading";
 
 function NewsList({ newsData }) {
   const [category, setCategory] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [isLoadingMore, setIsLoadingMore] = useState(false);
+  const [numToShow, setNumToShow] = useState(5);
 
   const download = () => {
     const currentDate = new Date();
@@ -20,6 +23,27 @@ function NewsList({ newsData }) {
       setIsLoading(false);
     }, navigator.connection.downlink * 1000);
   };
+
+  const observer = useRef(null);
+  const finalElementRef = useRef(null);
+
+  useEffect(() => {
+    if (isLoading) return;
+    if (observer.current) observer.current.disconnect();
+
+    observer.current = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        setIsLoadingMore(true);
+        setTimeout(() => {
+          setNumToShow((prevNum) => prevNum + 6);
+          setIsLoadingMore(false);
+        }, navigator.connection.downlink * 1000);
+      }
+    });
+
+    if (finalElementRef.current)
+      observer.current.observe(finalElementRef.current);
+  }, [isLoading]);
 
   return (
     <div className="container-notice">
@@ -45,7 +69,7 @@ function NewsList({ newsData }) {
         </>
       ) : (
         <>
-          {newsData.map((newsItem) => (
+          {newsData.slice(0, numToShow).map((newsItem, index) => (
             <div key={newsItem.id}>
               {(newsItem.category === category || category === null) && (
                 <>
@@ -77,13 +101,18 @@ function NewsList({ newsData }) {
                       </details>
                     </div>
                   </div>
+                  {index === numToShow - 1 && numToShow < newsData.length && (
+                    <>
+                      <Notice />
+                    </>
+                  )}
                 </>
               )}
             </div>
           ))}
         </>
       )}
-      <div className="final">a</div>
+      <div className="final" ref={finalElementRef}></div>
     </div>
   );
 }

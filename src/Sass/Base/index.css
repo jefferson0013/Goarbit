@@ -361,7 +361,7 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  overflow: auto;
+  overflow-y: scroll;
 }
 .contat-seccions .seccions::-webkit-scrollbar {
   width: 0;

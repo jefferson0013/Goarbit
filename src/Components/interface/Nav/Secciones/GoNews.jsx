@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import newsData from "./news.json";
 import newCategory from "./category.json";
+import { Notice } from "./Loadings/Notice";
 
 function NewsList({ newsData }) {
   const [category, setCategory] = useState(null);
@@ -17,7 +18,7 @@ function NewsList({ newsData }) {
     setCategory(newCategory);
     setTimeout(() => {
       setIsLoading(false);
-    }, navigator.connection.downlink);
+    }, navigator.connection.downlink * 1000);
   };
 
   return (
@@ -37,7 +38,11 @@ function NewsList({ newsData }) {
         ))}
       </div>
       {isLoading ? (
-        <div className="loading">Cargando...</div>
+        <>
+          <Notice />
+          <Notice />
+          <Notice />
+        </>
       ) : (
         <>
           {newsData.map((newsItem) => (
@@ -91,7 +96,7 @@ export function GoNews() {
     setTimeout(() => {
       setNews(newsData);
       setLoading(false);
-    }, navigator.connection.downlink);
+    }, navigator.connection.downlink * 1000);
   }, []);
 
   return (

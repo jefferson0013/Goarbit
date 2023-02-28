@@ -23,7 +23,7 @@ export function NavMovil() {
     setHasClass(false);
     setTimeout(() => {
       setIsLoading(false);
-    }, navigator.connection.downlink);
+    }, navigator.connection.downlink * 1000);
   }
 
   function Go(T) {
@@ -33,7 +33,7 @@ export function NavMovil() {
     setHasClass(false);
     setTimeout(() => {
       setIsLoading(false);
-    }, navigator.connection.downlink);
+    }, navigator.connection.downlink * 1000);
   }
 
   return (

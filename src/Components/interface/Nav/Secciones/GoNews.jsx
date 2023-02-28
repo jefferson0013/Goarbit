@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import newsData from "./news.json";
 import newCategory from "./category.json";
 import { Notice } from "./Loadings/Notice";
-import { Loading } from "../../Nav/Movil/Seccions/Loading";
 
 function NewsList({ newsData }) {
   const [category, setCategory] = useState(null);
@@ -28,7 +27,7 @@ function NewsList({ newsData }) {
   const finalElementRef = useRef(null);
 
   useEffect(() => {
-    if (isLoading) return;
+    if (isLoading || isLoadingMore) return;
     if (observer.current) observer.current.disconnect();
 
     observer.current = new IntersectionObserver((entries) => {
@@ -43,7 +42,7 @@ function NewsList({ newsData }) {
 
     if (finalElementRef.current)
       observer.current.observe(finalElementRef.current);
-  }, [isLoading]);
+  }, [isLoading, isLoadingMore]);
 
   return (
     <div className="container-notice">
@@ -63,8 +62,6 @@ function NewsList({ newsData }) {
       </div>
       {isLoading ? (
         <>
-          <Notice />
-          <Notice />
           <Notice />
         </>
       ) : (
@@ -115,6 +112,7 @@ function NewsList({ newsData }) {
       <div className="final" ref={finalElementRef}></div>
     </div>
   );
+
 }
 
 export function GoNews() {
